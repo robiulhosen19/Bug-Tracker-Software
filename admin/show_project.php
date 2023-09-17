@@ -38,6 +38,7 @@
 
                                 <?php
                                     while($row = mysqli_fetch_assoc($show)){
+                                        $id = $row['pro_id'];
                                         $title = $row['title'];
                                         $type = $row['type'];
                                         $manager = $row['manager'];
@@ -53,6 +54,7 @@
                                 <tbody>
 
                                     <tr>
+                                       
                                     <td><?php echo $title ; ?></td>
                                     <td><?php echo $type ; ?></td>
                                     <td><?php echo $manager ; ?></td>
@@ -64,7 +66,7 @@
                                         
                                         <td>
                                             <a class="btn btn-primary" href="http://">Edit</a>
-                                            <a class="btn btn-danger" href="http://">Close</a>
+                                            <a class="btn btn-danger" href="project_delete.php?pro_id = <?php echo $id ?>"> Delete</a>
                                         </td>
 
                                     </tr>

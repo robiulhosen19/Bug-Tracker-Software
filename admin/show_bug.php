@@ -41,8 +41,8 @@ $show =   $result = mysqli_query($conn, $query);
 
                                 <p class="card-text"> Problem Type:<?php echo $err_type; ?> </p>
 
-                                <h5 class="card-title">Description<?php echo $msg; ?></h5>
-                                <p class="card-text"><?php echo $title; ?></p>
+                                <h5 class="card-title">Description</h5>
+                                <p class="card-text"> <?php echo $msg; ?> </p>
                             </div>
                             <div class="card-footer bg-transparent border-success">Start Date: <?php echo $start_date; ?></div>
                             <div class="card-footer bg-transparent border-success">Due Date :<?php echo $deu_date; ?></div>
