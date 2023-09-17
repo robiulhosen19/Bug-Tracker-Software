@@ -10,6 +10,7 @@
     
     if($run_delete_query ){
 
-        header("loaction: show_project.php?deleted");
+        header("Location: show_project.php");
+        exit();
     }
 ?>

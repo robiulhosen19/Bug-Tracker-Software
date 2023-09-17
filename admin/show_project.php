@@ -66,7 +66,7 @@
                                         
                                         <td>
                                             <a class="btn btn-primary" href="http://">Edit</a>
-                                            <a class="btn btn-danger" href="project_delete.php?pro_id = <?php echo $id ?>"> Delete</a>
+                                            <a class="btn btn-danger" href="project_delete.php?pro_id= <?php echo $row['pro_id'] ; ?> "> Delete</a>
                                         </td>
 
                                     </tr>

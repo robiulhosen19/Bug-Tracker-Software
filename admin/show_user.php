@@ -58,8 +58,8 @@
                                         <td><?php echo $address ; ?></td>
                                         <td><?php echo $role ; ?></td>
                                         <td>
-                                            <a class="btn btn-primary" href=""> Edit</a>
-                                            <a class="btn btn-danger" href="user_delete.php?id = <?php echo $did ?>"> Delete</a>
+                                            <a class="btn btn-primary" href="user_edit.php?id=<?php echo $row['id']; ?>"> Edit</a>
+                                            <a class="btn btn-danger" href="user_delete.php?id=<?php echo $row['id']; ?>"> Delete</a>
                                         </td>
                                     </tr>
                                    </tbody>

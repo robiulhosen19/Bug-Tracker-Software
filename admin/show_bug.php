@@ -46,8 +46,13 @@ $show =   $result = mysqli_query($conn, $query);
                             </div>
                             <div class="card-footer bg-transparent border-success">Start Date: <?php echo $start_date; ?></div>
                             <div class="card-footer bg-transparent border-success">Due Date :<?php echo $deu_date; ?></div>
-                            <div class="card-footer bg-transparent border-success">Close</div>
+                            <div class="card-footer bg-transparent border-success ">
+                                <div class="d-grid gap-20">
+                                    <a class="btn btn-danger" href="bug_delete.php?id=<?php echo $row['bugID']; ?>">Close</a>
+                                </div>
+                            </div>
                         </div>
+
 
                     <?php } ?>
 
