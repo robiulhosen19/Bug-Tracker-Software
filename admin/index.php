@@ -1,14 +1,30 @@
-
-<?php include_once("class/function.php") ; ?>
+<?php include_once("class/function.php") ?>
 <?php
 
+    if(isset($_POST['email']) && isset($_POST['password'])){
+        $useremail = $_POST['email'];
+        $userpass = $_POST['password'];
+        if(!empty($useremail) && !empty($userpass)){
+            $sql = "SELECT id FROM users WHERE email=' $useremail' AND password= '  $userpass' ";
+            $sql_query = mysqli_query($conn, $sql);
+
+            $mysqli_query_rows = mysqli_num_rows($sql_query);
+            if($mysqli_query_rows){
+                header("Location: show_user.php");
+             exit();
+            }
+            else{
+                echo 'Invalid Email oR Password ';
+            }
+        }else{
+            echo 'Fill up all fields!';
+        }
+        
+    }
+
+
+
 ?>
-
-
-
-
-
-
 <?php  include("includes/head.php")  ?>
     <body class="bg-primary">
         <div id="layoutAuthentication">
@@ -22,13 +38,13 @@
                                     <h3 class="text-center font-weight-light my-0">Login</h3>
                                     <div class="card-body">
 
-                                        <form action="class/function.php" method="POST">
+                                        <form action="index.php" method="POST">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" name="email" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                                <input class="form-control py-4" name="email" name="email" id="inputEmailAddress" type="email" placeholder="Enter email address" />
                                             </div>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputPassword">Password</label>
+                                                <label class="small mb-1" name="password" for="inputPassword">Password</label>
                                                 <input class="form-control py-4" id="inputPassword" name="password" type="password" placeholder="Enter password" />
                                             </div>
                                             <!-- <div class="form-group">

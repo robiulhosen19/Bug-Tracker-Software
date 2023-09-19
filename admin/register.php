@@ -1,7 +1,7 @@
 
 <?php include_once("class/function.php") ; ?>
 <?php
-    if(isset(POST["login"]))
+    if(isset($_POST[""]))
 ?>
 
 
@@ -19,17 +19,17 @@
                                         <form action="" method="post">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputFirstName">Full Name</label>
-                                                        <input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter Full name" />
+                                                        <input class="form-control py-4" name="name" id="inputFirstName" type="text" placeholder="Enter Full name" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" />
+                                                <input class="form-control py-4" name="email" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" />
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="small mb-1" for="inputPassword">Password</label>
-                                                        <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                                        <input class="form-control py-4" name="pass" id="inputPassword" type="password" placeholder="Enter password" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -39,7 +39,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block" href="login.html">Create Account</a></div>
+                                            <div class="form-group mt-4 mb-0">  <a class="btn btn-primary btn-block" href="login.html">Create Account</a></div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">

@@ -1,4 +1,6 @@
-<?php include("includes/head.php")  ?>
+<?php include("includes/head.php") ; 
+session_start();
+?>
 
 <?php include_once("class/function.php") ?>
 <?php 
@@ -16,9 +18,13 @@
             <main>
                 <div class="container-fluid">
                     <h1 class="mt-4">User Report</h1>
+
                     <ol class="breadcrumb mb-4">
                         <!-- <li class="breadcrumb-item active">Create User</li> -->
                         <a class="breadcrumb-item active" href="create_user.php">Create User</a>
+                        <!-- <?php 
+                        $_SESSION['status'];
+                        ?> -->
                     </ol>
                     <!--======================== page-content =================================-->
                     <div class="card-body">
